@@ -35,22 +35,26 @@ public class AreaActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	// Converts given feet to meters
 	public String ftToMeters(double ft) {
 		double meters = ft / 10.76;
 		return String.valueOf(meters);
 	}
 	
+	// Converts given meters to feet
 	public String metersToFt(double meters) {
 		double ft = meters * 10.76;
 		return String.valueOf(ft);
 	}
 	
+	// handles clicks of radio0
 	public void click1 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());
 		txt.setText(metersToFt(input));
 	}		
 	
+	// handles clicks of radio1
 	public void click2 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());

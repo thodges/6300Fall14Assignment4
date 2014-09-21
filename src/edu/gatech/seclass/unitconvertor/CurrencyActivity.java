@@ -35,22 +35,26 @@ public class CurrencyActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	// Converts given USD to Euros
 	public String usdToEuros(double usd) {
 		double euros = usd * .78;
 		return String.valueOf(euros);
 	}
 	
+	// Converts given Euros to USD
 	public String eurosToUSD(double euros) {
 		double usd = euros / .78;
 		return String.valueOf(usd);
 	}
 
+	// handles radio0 clicks
 	public void click1 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());
 		txt.setText(eurosToUSD(input));
 	}		
 	
+	// handles radio1 clicks
 	public void click2 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());

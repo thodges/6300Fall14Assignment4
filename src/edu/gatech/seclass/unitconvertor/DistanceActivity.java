@@ -35,22 +35,26 @@ public class DistanceActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	// Converts given Kilometers to Miles
 	public String kmToMiles(double km) {
 		double miles = km / 1.609;
 		return String.valueOf(miles);
 	}
 	
+	// Converts given miles to Kilometers
 	public String milesToKM(double miles) {
 		double km = miles * 1.609;
 		return String.valueOf(km);
 	}
 	
+	// handles radio0 clicks
 	public void click1 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());
 		txt.setText(milesToKM(input));
 	}
 	
+	// handles radio1 clicks
 	public void click2 (View view) {
 		EditText txt = (EditText) findViewById(R.id.editText);
 		double input = Double.parseDouble(txt.getText().toString());

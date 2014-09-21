@@ -35,18 +35,21 @@ public class MainActivity extends ActionBarActivity {
 		return super.onOptionsItemSelected(item);
 	}
 	
+	// handles Distance menu selections
 	public void runDistance(View view) {
 		
 		Intent intent = new Intent(this, DistanceActivity.class);
 		startActivity(intent);
 	}
 	
+	// handles Area menu selection
 	public void runArea(View view) {
 		
 		Intent intent = new Intent(this, AreaActivity.class);
 		startActivity(intent);
 	}
 	
+	// handles Currency menu selection
 	public void runCurrency(View view) {
 		
 		Intent intent = new Intent(this, CurrencyActivity.class);
